@@ -1,4 +1,5 @@
 ﻿// pedimos la cadena al usuario //
+Console.WriteLine("=============== LONGITUD CADENA ==================");
 string cadena = string.Empty;
 Console.WriteLine("ingrese la cadena:");
 cadena = Console.ReadLine();
@@ -6,12 +7,14 @@ cadena = Console.ReadLine();
 int longitudCadena = cadena.Length;
 Console.WriteLine($"Longitud de la cadena: {longitudCadena} caracteres");
 // pedimos una segunda cadena //
+Console.WriteLine("=============== CONCATENAR CADENAS ==================");
 string cadena2 = string.Empty;
 Console.WriteLine("ingrese otra cadena:");
 cadena2 = Console.ReadLine();
 // concatenamos ambas cadenas usando + //
 Console.WriteLine("Cadena Concatenada:" + cadena + cadena2);
 // extraemos una subcadena de la cadena ingresada (la primera) //
+Console.WriteLine("=============== EXTRAER SUBCADENA ==================");
 int indice = default;
 do
 {
@@ -99,7 +102,7 @@ while (!salirMenu)
         }
     }
     // preguntamos al usuario si desea realizar otra operacion //
-        Console.WriteLine("1 para seguir");
+    Console.WriteLine("1 para seguir");
     string CadenaSeguir = Console.ReadLine();
     int seguir;
     int.TryParse(CadenaSeguir, out seguir);
@@ -107,4 +110,13 @@ while (!salirMenu)
     {
         salirMenu = true;
     }
+}
+
+// recorremos la cadena (la primera) usando un ciclo foreach //
+Console.WriteLine("=================== CADENA CON FOREACH ===================");
+int indiceCadena = 0;
+foreach (var caracter in cadena)
+{
+    Console.WriteLine($"{indiceCadena}: {caracter}");
+    indiceCadena++;
 }
