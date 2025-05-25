@@ -150,3 +150,15 @@ Console.WriteLine($"cadena en mayuscula: {cadenaMayuscula}");
 Console.WriteLine("=================== CADENA EN MINUSCULA ===================");
 string cadenaMinuscula = cadena.ToLower();
 Console.WriteLine($"cadena en mayuscula: {cadenaMinuscula}");
+
+Console.WriteLine("=================== SPLIT ===================");
+// pedimos una cadena separada por los caracteres (- / _ o espacio)//
+Console.WriteLine("ingrese una cadena de caracteres:");
+string cadenaSeparadas = Console.ReadLine();
+char[] separadores = [' ', '/', '-', '_'];
+string[] retornoSplit = cadenaSeparadas.Split(separadores,StringSplitOptions.RemoveEmptyEntries);
+// mostramos el resultado con un foreach //
+foreach (var elemento in retornoSplit)
+{
+    Console.WriteLine(elemento);
+}
