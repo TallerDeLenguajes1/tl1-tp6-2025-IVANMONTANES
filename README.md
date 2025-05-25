@@ -21,6 +21,8 @@ string es un tipo por referencia
 - cuando usamos el prefijo $ nos permite interpolar cadenas, esto significa que podemos imprimir los valores de las variables dentro de la cadena incluyendo estas mismas dentro de llaves {}, por ejemplo si tuviesemos lo siguiente.
 
     int x = 2;
+
+    
     Console.WriteLine($"valor de la variable: {x}");
 
 
