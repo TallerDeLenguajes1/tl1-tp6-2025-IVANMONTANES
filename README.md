@@ -9,9 +9,9 @@ string es un tipo por referencia
 - \r:	Retorno de carro
 - \t:	Tabulación horizontal
 - \v:	Tabulación vertical
-- \':	Comilla simple
+- \\':	Comilla simple
 - \":	Comillas dobles
-- \\:	Barra diagonal inversa
+- \\\\:	Barra diagonal inversa
 - \?:	Signo de interrogación literal
 
 ## ¿Qué sucede cuando utiliza el carácter @?
