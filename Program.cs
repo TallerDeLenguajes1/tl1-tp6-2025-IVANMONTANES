@@ -1,4 +1,5 @@
-﻿// pedimos la cadena al usuario //
+﻿/*
+// pedimos la cadena al usuario //
 Console.WriteLine("=============== LONGITUD CADENA ==================");
 string cadena = string.Empty;
 Console.WriteLine("ingrese la cadena:");
@@ -161,4 +162,75 @@ string[] retornoSplit = cadenaSeparadas.Split(separadores,StringSplitOptions.Rem
 foreach (var elemento in retornoSplit)
 {
     Console.WriteLine(elemento);
+}*/
+
+// pedimos que ingrese una operacion combinada //
+
+Console.WriteLine("ingrese una operacion combinada de 2 terminos:");
+string operacionCombinadaSimple = Console.ReadLine();
+// usamos split para separar los numeros //
+char[] separadores = ['+', '*', '-','/',' '];
+string[] numeros = operacionCombinadaSimple.Split(separadores, StringSplitOptions.RemoveEmptyEntries);
+// usamos split para obtener el operador aritmetico//
+char[] separadores2 = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9', ',', '.',' '];
+string[] signo = operacionCombinadaSimple.Split(separadores2, StringSplitOptions.RemoveEmptyEntries);
+bool fallo1 = false,fallo2=false;
+double numero1 = default, numero2 = default;
+if (numeros.Length == 2)
+{
+    fallo1 = double.TryParse(numeros[0], out numero1);
+    fallo2 = double.TryParse(numeros[1], out numero2);
+    if (fallo1 && fallo2)
+    {
+        if (signo.Length == 1 && numeros.Length == 2)
+        {
+            // usamos split para que no se vean los espacios en blanco en caso de haber insertado muchos //
+            char[] separadores3 = [' '];
+            string[] operacionFormateada = operacionCombinadaSimple.Split(separadores3, StringSplitOptions.RemoveEmptyEntries);
+            // concatenamos los elementos //
+            string concatenado = string.Empty;
+            int contador = 0;
+            foreach (var elemento in operacionFormateada)
+            {
+                concatenado = string.Concat(concatenado, elemento);
+                if (contador < operacionFormateada.Length-1)
+                {
+                    concatenado = string.Concat(concatenado, " ");
+                }
+                contador++;
+            }
+            switch (signo[0])
+            {
+                case "+": Console.WriteLine($"{concatenado} = {numero1 + numero2}"); break;
+
+                case "-": Console.WriteLine($"{concatenado} = {numero1 - numero2}"); break;
+
+                case "*": Console.WriteLine($"{concatenado} = {numero1 * numero2}"); break;
+
+                case "/":
+                    if (numero2 != 0)
+                    {
+                        Console.WriteLine($"{concatenado} = {numero1 / numero2}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("no se puede dividir entre 0");
+                    }
+                    break;
+            }
+        }
+        else
+        {
+            Console.WriteLine("ingrese una ecuacion simple de 2 terminos");
+        }
+    }
+    else
+    {
+        Console.WriteLine("uno o ambos terminos no son numeros");
+    }
 }
+else
+{
+    Console.WriteLine("ingrese una ecuacion simple de 2 terminos");
+}
+    
