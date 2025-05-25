@@ -29,3 +29,55 @@ else
     Console.WriteLine($"Subcadena: {subcadena}");
 }
 
+// menu de operaciones //
+bool salirMenu = false;
+while (!salirMenu)
+{
+    Console.WriteLine("=============== OPERACIONES ==================");
+    Console.WriteLine("1: SUMAR");
+    Console.WriteLine("2: RESTAR");
+    Console.WriteLine("3: MULTIPLICAR");
+    Console.WriteLine("4: DIVIDIR");
+    string cadenaOpcion = Console.ReadLine();
+    // tratamos de convertir la cadena a un numero //
+    int opcion;
+    int.TryParse(cadenaOpcion, out opcion);
+    // cuando se ingrese una de las opciones //
+    if (opcion >= 1 && opcion <= 4)
+    {
+        // cargamos el primer numero //
+        double numero1 = default;
+        bool numero1Cargado = false;
+        do
+        {
+            Console.WriteLine("ingrese el primer numero:");
+            numero1Cargado = double.TryParse(Console.ReadLine(), out numero1);
+            if (!numero1Cargado)
+            {
+                Console.WriteLine("No se pudo realizar la conversion a un numero");
+            }
+        } while (!numero1Cargado);
+
+        // cargamos el segundo numero //
+        double numero2 = default;
+        bool numero2Cargado = false;
+        do
+        {
+            Console.WriteLine("ingrese el segundo numero:");
+            numero2Cargado = double.TryParse(Console.ReadLine(), out numero2);
+            if (!numero2Cargado)
+            {
+                Console.WriteLine("No se pudo realizar la conversion a un numero");
+            }
+        } while (!numero2Cargado);
+    }
+    // preguntamos al usuario si desea realizar otra operacion //
+        Console.WriteLine("1 para seguir");
+    string CadenaSeguir = Console.ReadLine();
+    int seguir;
+    int.TryParse(CadenaSeguir, out seguir);
+    if (seguir != 1)
+    {
+        salirMenu = true;
+    }
+}
