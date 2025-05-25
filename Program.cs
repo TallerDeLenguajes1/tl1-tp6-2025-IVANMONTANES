@@ -120,3 +120,23 @@ foreach (var caracter in cadena)
     Console.WriteLine($"{indiceCadena}: {caracter}");
     indiceCadena++;
 }
+
+// pedimos una nueva cadena y buscamos si aparece en la cadena (la primera) //
+Console.WriteLine("=================== BUSCAR OCURRENCIA ===================");
+Console.WriteLine("ingrese una palabra:");
+string palabra = Console.ReadLine();
+int retornoIndexOf = cadena.IndexOf(palabra);
+// verificamos que se haya encontrado //
+if (retornoIndexOf != -1)
+{
+    Console.WriteLine("========= CADENA ENCONTRADA ===========");
+    Console.WriteLine($"cadena ingresada: {palabra}");
+    Console.WriteLine($"cadena donde se busco: {cadena}");
+    Console.WriteLine($"encontrada en el indice {retornoIndexOf}");
+}
+else
+{
+    Console.WriteLine("========== CADENA NO ENCONTRADA ==========");
+    Console.WriteLine($"cadena ingresada: {palabra}");
+    Console.WriteLine($"cadena donde se busco: {cadena}");
+}
