@@ -70,6 +70,33 @@ while (!salirMenu)
                 Console.WriteLine("No se pudo realizar la conversion a un numero");
             }
         } while (!numero2Cargado);
+
+        // realizamos las operaciones //
+        switch (opcion)
+        {
+            case 1:
+                Console.WriteLine($"La suma de {numero1:f2} y de {numero2:f2} es igual a: {numero1 + numero2:f2}");
+                break;
+
+            case 2:
+                Console.WriteLine($"La resta de {numero1:f2} y de {numero2:f2} es igual a: {numero1 - numero2:f2}");
+                break;
+
+            case 3:
+                Console.WriteLine($"el producto de {numero1:f2} y de {numero2:f2} es igual a: {numero1 * numero2:f2}");
+                break;
+
+            case 4:
+                if (numero2 == 0)
+                {
+                    Console.WriteLine("no se puede dividir entre 0");
+                }
+                else
+                {
+                    Console.WriteLine($"el cociente de {numero1:f2} y {numero2:f2} es igual a {numero1 / numero2:f2} ");
+                }
+                break;
+        }
     }
     // preguntamos al usuario si desea realizar otra operacion //
         Console.WriteLine("1 para seguir");
