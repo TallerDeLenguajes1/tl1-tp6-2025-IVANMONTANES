@@ -140,3 +140,13 @@ else
     Console.WriteLine($"cadena ingresada: {palabra}");
     Console.WriteLine($"cadena donde se busco: {cadena}");
 }
+
+// convertimos la cadena (la primera) a mayuscula //
+Console.WriteLine("=================== CADENA EN MAYUSCULA ===================");
+string cadenaMayuscula = cadena.ToUpper();
+Console.WriteLine($"cadena en mayuscula: {cadenaMayuscula}");
+
+// convertimos la cadena (la primera) a minuscula //
+Console.WriteLine("=================== CADENA EN MINUSCULA ===================");
+string cadenaMinuscula = cadena.ToLower();
+Console.WriteLine($"cadena en mayuscula: {cadenaMinuscula}");
