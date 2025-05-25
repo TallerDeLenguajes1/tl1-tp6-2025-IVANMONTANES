@@ -23,8 +23,8 @@ string es un tipo por referencia
     int x = 2;
     Console.WriteLine($"valor de la variable: {x}");
 
-    
-lo que veriamos por consola seria: "valor de la variable: 2"
+
+    lo que veriamos por consola seria: "valor de la variable: 2"
 
 
 

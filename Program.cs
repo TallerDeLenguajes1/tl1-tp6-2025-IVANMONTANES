@@ -1,5 +1,4 @@
-﻿/*
-// pedimos la cadena al usuario //
+﻿// pedimos la cadena al usuario //
 Console.WriteLine("=============== LONGITUD CADENA ==================");
 string cadena = string.Empty;
 Console.WriteLine("ingrese la cadena:");
@@ -162,31 +161,31 @@ string[] retornoSplit = cadenaSeparadas.Split(separadores,StringSplitOptions.Rem
 foreach (var elemento in retornoSplit)
 {
     Console.WriteLine(elemento);
-}*/
+}
 
+Console.WriteLine("=================== ECUACION SIMPLE ===================");
 // pedimos que ingrese una operacion combinada //
-
 Console.WriteLine("ingrese una operacion combinada de 2 terminos:");
 string operacionCombinadaSimple = Console.ReadLine();
 // usamos split para separar los numeros //
-char[] separadores = ['+', '*', '-','/',' '];
-string[] numeros = operacionCombinadaSimple.Split(separadores, StringSplitOptions.RemoveEmptyEntries);
+char[] separadores2 = ['+', '*', '-','/',' '];
+string[] numeros = operacionCombinadaSimple.Split(separadores2, StringSplitOptions.RemoveEmptyEntries);
 // usamos split para obtener el operador aritmetico//
-char[] separadores2 = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9', ',', '.',' '];
-string[] signo = operacionCombinadaSimple.Split(separadores2, StringSplitOptions.RemoveEmptyEntries);
+char[] separadores3 = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9', ',', '.',' '];
+string[] signo = operacionCombinadaSimple.Split(separadores3, StringSplitOptions.RemoveEmptyEntries);
 bool fallo1 = false,fallo2=false;
-double numero1 = default, numero2 = default;
+double numero1_2 = default, numero2_2 = default;
 if (numeros.Length == 2)
 {
-    fallo1 = double.TryParse(numeros[0], out numero1);
-    fallo2 = double.TryParse(numeros[1], out numero2);
+    fallo1 = double.TryParse(numeros[0], out numero1_2);
+    fallo2 = double.TryParse(numeros[1], out numero2_2);
     if (fallo1 && fallo2)
     {
         if (signo.Length == 1 && numeros.Length == 2)
         {
             // usamos split para que no se vean los espacios en blanco en caso de haber insertado muchos //
-            char[] separadores3 = [' '];
-            string[] operacionFormateada = operacionCombinadaSimple.Split(separadores3, StringSplitOptions.RemoveEmptyEntries);
+            char[] separadores4 = [' '];
+            string[] operacionFormateada = operacionCombinadaSimple.Split(separadores4, StringSplitOptions.RemoveEmptyEntries);
             // concatenamos los elementos //
             string concatenado = string.Empty;
             int contador = 0;
@@ -201,16 +200,16 @@ if (numeros.Length == 2)
             }
             switch (signo[0])
             {
-                case "+": Console.WriteLine($"{concatenado} = {numero1 + numero2}"); break;
+                case "+": Console.WriteLine($"{concatenado} = {numero1_2 + numero2_2}"); break;
 
-                case "-": Console.WriteLine($"{concatenado} = {numero1 - numero2}"); break;
+                case "-": Console.WriteLine($"{concatenado} = {numero1_2 - numero2_2}"); break;
 
-                case "*": Console.WriteLine($"{concatenado} = {numero1 * numero2}"); break;
+                case "*": Console.WriteLine($"{concatenado} = {numero1_2 * numero2_2}"); break;
 
                 case "/":
-                    if (numero2 != 0)
+                    if (numero2_2 != 0)
                     {
-                        Console.WriteLine($"{concatenado} = {numero1 / numero2}");
+                        Console.WriteLine($"{concatenado} = {numero1_2 / numero2_2}");
                     }
                     else
                     {
