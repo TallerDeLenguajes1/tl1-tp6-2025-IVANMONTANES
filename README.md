@@ -1,1 +1,31 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/24pP-Pw_)
+# ¿String es una tipo por valor o un tipo por referencia?
+string es un tipo por referencia
+
+# ¿Qué secuencias de escape tiene el tipo string?
+- \a: campana(alerta)
+- \b:	Retroceso
+- \f:	Avance de página
+- \n:	Nueva línea
+- \r:	Retorno de carro
+- \t:	Tabulación horizontal
+- \v:	Tabulación vertical
+- \':	Comilla simple
+- \":	Comillas dobles
+- \\:	Barra diagonal inversa
+- \?:	Signo de interrogación literal
+
+## ¿Qué sucede cuando utiliza el carácter @?
+- cuando usamos el prefijo @ estamos indicando que la cadena debe intepretarse literalemente, es decir que por ejemplo las secuencias de escape no produciran caracteres especiales si no que se mostraran literalmente
+
+## ¿Qué sucede cuando utiliza el carácter $?
+- cuando usamos el prefijo $ nos permite interpolar cadenas, esto significa que podemos imprimir los valores de las variables dentro de la cadena incluyendo estas mismas dentro de llaves {}, por ejemplo si tuviesemos lo siguiente.
+    int x = 2;
+    Console.WriteLine($"valor de la variable: {x}");
+lo que veriamos por consola seria: "valor de la variable: 2"
+
+
+
+
+
+
+
