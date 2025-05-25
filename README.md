@@ -10,7 +10,7 @@ string es un tipo por referencia
 - \t:	Tabulación horizontal
 - \v:	Tabulación vertical
 - \\':	Comilla simple
-- \":	Comillas dobles
+- \\":	Comillas dobles
 - \\\\:	Barra diagonal inversa
 - \?:	Signo de interrogación literal
 
